@@ -10,7 +10,7 @@ Manutenção e gestão de recursos numa casa/infraestrutura
 
 ## Enquadramento
 
-Os recursos do planeta terra sao limitados e por vezes poluentes, por isso temos de tentar aproveitar ao máximo os recursos que temos, sem os desperdicar. Por isso criámos uma aplicação para tentar ajudar as pessoas a conseguirem acompanhar o seu consumo de recursos em casa, neste caso eletrecidade e gás natural, sendo que neste trabalho vamos incidir no lado da eletrecidade.
+Os recursos do planeta terra são limitados e por vezes poluentes, por isso temos de tentar aproveitar ao máximo os recursos que temos, sem os desperdicar. Por isso criámos uma aplicação para tentar ajudar as pessoas a conseguirem acompanhar o seu consumo de recursos em casa, neste caso eletrecidade e gás natural, sendo que neste trabalho vamos incidir no lado da eletrecidade.
 
 A energia elétrica, por exemplo, pode ser produzida de diversas formas, quer estas sejam a partir de recursos fosseis, tais como o carvão, ou a partir de recursos renováveis, como a energia eólica e hidrica, como é o caso de Portugal que é muito dependente das energias renováveis, sendo estas as predominantes do país. Muitas das pessoas que vivem em Portugal não têm interesse em saber a energia que gastam, por exemplo, em 2007 Portugal foi analisado e concluiu-se que Portugal desperdiçava cerca de 60% da energia que consumia, quer esta seja através da má eficiência energética dos edifícos ou objetos ligados à corrente, como podemos ver neste artigo do jornal de negócios [https://www.jornaldenegocios.pt/empresas/detalhe/portugal_desperdica_60_da_energia_que_consome].
 
