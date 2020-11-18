@@ -62,7 +62,7 @@ O utilizador poderá visualizar os consumos de duas semanas à escolha do mesmo.
 
 **Passo a passo:**
 1. O utilizador poderá carregar noutro butão na home page que vai abrir uma nova janela.
-2. Nesta janela, outilizador poderá escolher as semanas acerca dos dados que vão ser apresentados.
+2. Nesta janela, o utilizador poderá escolher as semanas acerca dos dados que vão ser apresentados.
 3. Se o utilizador quiser visualizar outra semana poderá fazê-lo no menu.
 
 
