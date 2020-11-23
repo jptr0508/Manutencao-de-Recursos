@@ -46,8 +46,8 @@ O utilizador poderá visualizar os dados num gráfico.
 - Comunicação correta com a base de dados.
 
 **Passo a passo:**
-1. Na home page, o utilizador pode carregar num butão para acionar o gráfico.   
-2. O gráfcio é apresentado ao utilizador numa nova janela.
+1. Na home page, o utilizador pode carregar num botão para acionar o gráfico.   
+2. O gráfico é apresentado ao utilizador numa nova janela.
 3. O utilizador poderá escolher se pretende visualizar todas as componentes ou apenas uma. 
 
 **Pós-condições:**
