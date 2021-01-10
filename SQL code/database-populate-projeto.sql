@@ -15,8 +15,8 @@ insert into consumo(consumo_data, consumo_quantidade, tipo, eletro_id) values ("
 insert into consumo(consumo_data, consumo_quantidade, tipo, eletro_id) values ("2020-01-05", 16.8, 'gás', 4);
 insert into consumo(consumo_data, consumo_quantidade, tipo, eletro_id) values ("2020-04-03", 49, 'gás', 5);
 
-insert into tipo_consumo(tipo, eletricidade) values ('eletricidade', true);
-insert into tipo_consumo(tipo, gas) values ('gás', false);
+insert into tipo_consumo(tipo, eletricidade, gas) values (1, true, false);
+insert into tipo_consumo(tipo, eletrecidade, gas) values (2, false, true);
 
 insert into conta(conta_mes, conta_custo, conta_objetivo, plan_conta) values (5, 46.69, 50);
 insert into conta(conta_mes, conta_custo, conta_objetivo, plan_conta) values (5, 30.24, 37.5);

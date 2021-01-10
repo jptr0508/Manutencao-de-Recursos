@@ -14,11 +14,11 @@ create table utilizador(user_id int not null auto_increment,
 create table consumo(consumo_id int not null auto_increment,
                      consumo_data date not null,
                      consumo_quantidade double,
-                     tipo varchar(20),
+                     tipo int not null,
                      eletro_id varchar(30),
                      primary key(consumo_id));
                      
-create table tipo_consumo(tipo varchar(20),
+create table tipo_consumo(tipo int(20),
                           gas boolean,
                           eletricidade boolean,
                           primary key(tipo));
@@ -39,7 +39,7 @@ create table eletrodomestico(eletro_id int not null auto_increment,
                              eletro_nome varchar(30),
                              consumo double not null,
                              tempo_on double not null,
-                             tipo double,
+                             tipo int not null,
                              primary key(eletro_id));
                              
 -- foreign keys
