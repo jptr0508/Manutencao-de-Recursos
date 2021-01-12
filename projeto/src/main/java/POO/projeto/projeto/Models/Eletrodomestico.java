@@ -16,14 +16,10 @@ public class Eletrodomestico {
     @Column(name = "eletro_nome") private String eletro_nome;
     @Column(name = "consumo") private double eletro_consumo;
     @Column(name = "tempo_on") private double tempo_on;
-    @Column(name = "tipo") private Tipo tipo;
+    @Column(name = "tipo") private int tipo;
 
-    public Eletrodomestico(int eletro_id, String eletro_nome, double eletro_consumo, double tempo_on, Tipo tipo) {
-        this.eletro_id = eletro_id;
-        this.eletro_nome = eletro_nome;
-        this.eletro_consumo = eletro_consumo;
-        this.tempo_on = tempo_on;
-        this.tipo = tipo;
+    public Eletrodomestico() {
+        
     }
 
     public int getEletro_id() {
@@ -58,11 +54,11 @@ public class Eletrodomestico {
         this.tempo_on = tempo_on;
     }
 
-    public Tipo getTipo() {
+    public int getTipo() {
         return tipo;
     }
 
-    public void setTipo(Tipo tipo) {
+    public void setTipo(int tipo) {
         this.tipo = tipo;
     }
 
