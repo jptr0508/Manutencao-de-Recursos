@@ -15,17 +15,13 @@ import javax.persistence.Table;
 public class Utilizador {
     @Id @GeneratedValue
     (strategy = GenerationType.IDENTITY)
-   @Column(name ="user_nome") String user_nome;
-   @Column(name ="user_idade" ) Date user_idade;
-   @Column(name = "user_sexo") char user_sexo;
-   @Column(name = "user_local") String user_local;
+    @Column(name = "user_id") int user_id;
+    @Column(name = "user_nome") String user_nome;
+    @Column(name = "user_idade" ) Date user_idade;
+    @Column(name = "user_sexo") char user_sexo;
+    @Column(name = "user_local") String user_local;
 
-    public Utilizador(String user_nome, Date user_idade, char user_sexo, String user_local) {
-        this.user_nome = user_nome;
-        this.user_idade = user_idade;
-        this.user_sexo = user_sexo;
-        this.user_local = user_local;
-    }
+  public Utilizador() {  }
 
     public String getUser_nome() {
         return user_nome;
@@ -58,6 +54,18 @@ public class Utilizador {
     public void setUser_local(String user_local) {
         this.user_local = user_local;
     }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
+    
+    
+  
     
     
 

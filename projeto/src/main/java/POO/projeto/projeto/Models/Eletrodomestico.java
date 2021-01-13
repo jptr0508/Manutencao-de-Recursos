@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "eletrodomestico")
 public class Eletrodomestico {
@@ -16,11 +18,10 @@ public class Eletrodomestico {
     @Column(name = "eletro_nome") private String eletro_nome;
     @Column(name = "consumo") private double eletro_consumo;
     @Column(name = "tempo_on") private double tempo_on;
-    @Column(name = "tipo") private int tipo;
+    @JsonIgnore
+    @Column(name = "tipo") private boolean tipo;
 
-    public Eletrodomestico() {
-        
-    }
+    public Eletrodomestico() {}
 
     public int getEletro_id() {
         return eletro_id;
@@ -54,11 +55,11 @@ public class Eletrodomestico {
         this.tempo_on = tempo_on;
     }
 
-    public int getTipo() {
+    public boolean getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(boolean tipo) {
         this.tipo = tipo;
     }
 
