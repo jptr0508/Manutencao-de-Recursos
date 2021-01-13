@@ -15,6 +15,7 @@ create table consumo(consumo_id int not null auto_increment,
                      consumo_data date not null,
                      consumo_quantidade double,
                      eletro_id varchar(30),
+                     tipo boolean,
                      primary key(consumo_id));
                           
 create table conta(conta_id int not null auto_increment,
@@ -33,6 +34,7 @@ create table eletrodomestico(eletro_id int not null auto_increment,
                              eletro_nome varchar(30),
                              consumo double not null,
                              tempo_on double not null,
+                             tipo boolean,
                              primary key(eletro_id));
                              
 -- foreign keys

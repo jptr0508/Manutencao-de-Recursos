@@ -9,11 +9,11 @@ insert into utilizador(user_nome, user_idade, user_sexo, user_local, consumo_sem
 insert into utilizador(user_nome, user_idade, user_sexo, user_local, consumo_sem, conta_utilizador) values('Carlos Costa',str_to_date('1983.07.10','%Y.%m.%d'),'M', 'Braga', 9, 9);
 insert into utilizador(user_nome, user_idade, user_sexo, user_local, consumo_sem, conta_utilizador) values('Filipe Almeida',str_to_date('1988.09.06','%Y.%m.%d'),'M', 'Cascais', 10, 10);
 
-insert into consumo(consumo_data, consumo_quantidade, eletro_id) values ("2020-10-31", 43.4, 1);
-insert into consumo(consumo_data, consumo_quantidade, eletro_id) values ("2020-07-03", 33.6, 2);
-insert into consumo(consumo_data, consumo_quantidade, eletro_id) values ("2020-02-12", 756, 3);
-insert into consumo(consumo_data, consumo_quantidade, eletro_id) values ("2020-01-05", 16.8, 4);
-insert into consumo(consumo_data, consumo_quantidade, eletro_id) values ("2020-04-03", 49,, 5);
+insert into consumo(consumo_data, consumo_quantidade, eletro_id, tipo) values ("2020-10-31", 43.4, 1, true);
+insert into consumo(consumo_data, consumo_quantidade, eletro_id, tipo) values ("2020-07-03", 33.6, 2, true);
+insert into consumo(consumo_data, consumo_quantidade, eletro_id, tipo) values ("2020-02-12", 756, 3, true);
+insert into consumo(consumo_data, consumo_quantidade, eletro_id, tipo) values ("2020-01-05", 16.8, 4, false);
+insert into consumo(consumo_data, consumo_quantidade, eletro_id, tipo) values ("2020-04-03", 49, 5, false);
 
 insert into conta(conta_mes, conta_custo, conta_objetivo, plan_conta) values (5, 46.69, 50);
 insert into conta(conta_mes, conta_custo, conta_objetivo, plan_conta) values (5, 30.24, 37.5);
@@ -28,8 +28,8 @@ insert into conta(conta_mes, conta_custo, conta_objetivo, plan_conta) values (5,
 
 insert into plano() values ();
 
-insert into eletrodomestico(eletro_nome, consumo, tempo_on) values ('micro-ondas', 3.1, 2);
-insert into eletrodomestico(eletro_nome, consumo, tempo_on) values ('máquina de lavar a roupa', 2.4, 2);
-insert into eletrodomestico(eletro_nome, consumo, tempo_on) values ('frigorífico', 4.5, 24);
-insert into eletrodomestico(eletro_nome, consumo, tempo_on) values ('fogão', 1.2, 2);
-insert into eletrodomestico(eletro_nome, consumo, tempo_on) values ('esquentador', 3, 4);
+insert into eletrodomestico(eletro_nome, consumo, tempo_on, tipo) values ('micro-ondas', 3.1, 2, true);
+insert into eletrodomestico(eletro_nome, consumo, tempo_on, tipo) values ('máquina de lavar a roupa', 2.4, 2, true);
+insert into eletrodomestico(eletro_nome, consumo, tempo_on, tipo) values ('frigorífico', 4.5, 24,  true);
+insert into eletrodomestico(eletro_nome, consumo, tempo_on, tipo) values ('fogão', 1.2, 2, false);
+insert into eletrodomestico(eletro_nome, consumo, tempo_on, tipo) values ('esquentador', 3, 4, false);
