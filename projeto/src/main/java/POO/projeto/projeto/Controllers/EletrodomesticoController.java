@@ -31,7 +31,7 @@ return EletrodomesticoRepository.findAll();
 } //works
 
 @GetMapping(path ="/{eletro_id:[1-9]+}", produces= MediaType.APPLICATION_JSON_VALUE)
-public Eletrodomestico getTipo(@PathVariable int eletro_id) {
+public Eletrodomestico getId(@PathVariable int eletro_id) {
     logger.info("Sending eletrodomesticos that correspont to the id "+eletro_id);
     Optional<Eletrodomestico> _eletrodomestico= EletrodomesticoRepository.findById(eletro_id);
     if (_eletrodomestico.isEmpty()) throw
