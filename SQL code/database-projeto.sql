@@ -7,8 +7,8 @@ create table utilizador(user_id int not null auto_increment,
                         user_idade date not null,
                         user_sexo char(1) not null,
                         user_local varchar(30),
-                        consumo_sem double,
-                        conta_utilizador double not null,
+                        consumo_sem int,
+                        conta_utilizador int not null,
                         primary key(user_id));
                         
 create table consumo(consumo_id int not null auto_increment,
