@@ -20,51 +20,71 @@ Para este trabalho se concretizar vamos recorrer a diversos sites, tais como a I
 
 ## Casos de utilização:
 
-### Introdução de Dados
+### Visualizacao do custo da energia consumida e da energia total consumida.
 **Descrição:** \
-O utilizador introduz os dados sobre os seus consumos energéticos na aplicação e estes serão guardados pela mesma. 
+Na página principal será mostrado ao utilizador o custo mensal da energia consumida, bem como a participação energética de cada eletrodoméstico.
+Se o utilizador ainda nao possuir nenhum eletrodoméstico registado, ser-lhe-á pedido que registe pelo menos um eletrodoméstico.
 
 **Pré-condições:**
-- Utilizador efetua o login com sucesso.
+- Utilizador entra com sucesso na sua pagina;
+- Existe uma comunicação feita com sucesso com a base de dados;
 
 **Passo a passo:**
 1. Executar a aplicação.   
-2. Fazer o login.
-3. O utilizador seleciona a categoria em que pretende colocar os dados.
-4. O utilizador introduz os dados.
-5. Uma vez introduzidos os dados, o utilizador escolhe se quer guardar os dados ou alterar os mesmos depois de estarem guardados.
-6.Os dados guardados podem ser apresentados na home page se o utilizador assim quiser.
+2. Entrar na pagina do utilizador.
+3. Se não houverem eletrodomesticos registados, o utilizador terá de registar novos eletrodomesticos.
+4. O utilizador introduz os consumos dos respetivos eletrodomesticos, se ainda não houverem valores.
+5. Uma vez introduzidos os dados, estes serão registados na base de dados.
+6. Serão apresentados na homepage do utilizador o consumo total dos eletrodomesticos e o custo do consumo elétrico.
+7. O utilizador tambem poderá ordenar os eletrodomesticos por ordem crescente ou decrescente de consumo ou por ordem alfabetica quando estes são apresentados.
 
 **Pós-condições:**
 - Comunicação correta com a base de dados.
 
-### Visualização dos Dados através de um Gráfico.
+### Adição e remoção de eletrodomésticos
 **Descrição:** \
-O utilizador poderá visualizar os dados num gráfico.
+Alterar ou remover eletrodomésticos
 
 **Pré-condições:**
 - Comunicação correta com a base de dados.
 
 **Passo a passo:**
-1. Na home page, o utilizador pode carregar num botão para acionar o gráfico.   
-2. O gráfico é apresentado ao utilizador numa nova janela.
-3. O utilizador poderá escolher se pretende visualizar todas as componentes ou apenas uma. 
+1. Na home page, será apresentado ao utilizador a opção de alterar os seus eletromoésticos através dum botão.
+2. Uma vez carregado no botão, o utilizador será levado para uma página em vai vizualizar todos os eletrodomésticos que possui.
+3. No canto superior direito dessa página serão apresentados dois botões, em que um dá a opção do utilizador remover um eletrodoméstico e outro para adicionar um eletrodomestico, neste caso o utilizador vai ter de colocar os dados respetivos ao eletromoéstico para o adicionar com sucesso.
+4. Se o utilizador não quiser fazer nenhuma destas opções ser-lhe-á dada a opção de voltar a trás através dum botão localizado no canto inferior direito da página.
 
 **Pós-condições:**
 N/A
 
-### Comparação de Dados.
+### Adicionar um novo consumo.
 **Descrição:** \
-O utilizador poderá visualizar os consumos de duas semanas à escolha do mesmo.
+O uttilizador poderá adicionar um novo consumo duma nova semana.
 
 **Pré-condições:**
-- Acesso à base de dados.
+N/A
 
 **Passo a passo:**
-1. O utilizador poderá carregar noutro butão na home page que vai abrir uma nova janela.
-2. Nesta janela, o utilizador poderá escolher as semanas acerca dos dados que vão ser apresentados.
-3. Se o utilizador quiser visualizar outra semana poderá fazê-lo no menu.
+1. Na homepage do utilizador será apresentado um botão no canto superior direito, em que se o utilizador o carregador será velado para uma nova página.
+2. Nesta página o utilizador vai indicar que eletrodomesticos estiveram ligados e o respetivo tempo que estiveram ligados.
+3. Com estes dados o programa vai fazer os calculos para saber a quantidade de energia elétrica consumida naquela semana.
 
+
+**Pós-condições:**
+-Comunicação com a base de dados
+
+### Estabelecimento de um objetivo
+**Descrição:** O utilizador estabelece um objetivo para o seu custo elétrico.
+
+
+**Pré-condições:**
+- Comunicação correta com a base de dados.
+
+**Passo a passo:**
+1. Na home page, será apresentado ao utilizador a opção de alterar os seus eletromoésticos através dum botão.
+2. Uma vez carregado no botão, o utilizador será levado para uma página em vai vizualizar todos os eletrodomésticos que possui.
+3. No canto superior direito dessa página serão apresentados dois botões, em que um dá a opção do utilizador remover um eletrodoméstico e outro para adicionar um eletrodomestico, neste caso o utilizador vai ter de colocar os dados respetivos ao eletromoéstico para o adicionar com sucesso.
+4. Se o utilizador não quiser fazer nenhuma destas opções ser-lhe-á dada a opção de voltar a trás através dum botão localizado no canto inferior direito da página.
 
 **Pós-condições:**
 N/A
