@@ -50,7 +50,7 @@ Adicionar ou remover eletrodomésticos
 
 **Passo a passo:**
 1. Na home page, será apresentado ao utilizador a opção de alterar os seus eletromoésticos através dum botão.
-2. Uma vez carregado no botão, o utilizador será levado para uma página em que vai visualizar todos os eletrodomésticos que possui.
+2. Uma vez carregado, o utilizador será levado para uma página em que vai visualizar todos os eletrodomésticos que possui.
 3. No canto superior direito da página serão apresentados dois botões, em que um dá a opção do utilizador remover um eletrodoméstico e outro para adicionar um eletrodoméstico, neste caso o utilizador vai ter de colocar os dados respetivos ao eletrodoméstico para o adicionar com sucesso.
 4. Se o utilizador não quiser fazer nenhuma destas opções ser-lhe-á dada a opção de voltar atrás através dum botão localizado no canto inferior direito da página.
 
