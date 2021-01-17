@@ -76,18 +76,16 @@ N/A
 ### Estabelecimento de um objetivo
 **Descrição:** O utilizador estabelece um objetivo para o seu custo elétrico.
 
-
 **Pré-condições:**
-- Comunicação correta com a base de dados.
+N/A
 
 **Passo a passo:**
-1. Na home page, será apresentado ao utilizador a opção de alterar os seus eletromoésticos através dum botão.
-2. Uma vez carregado no botão, o utilizador será levado para uma página em vai vizualizar todos os eletrodomésticos que possui.
-3. No canto superior direito dessa página serão apresentados dois botões, em que um dá a opção do utilizador remover um eletrodoméstico e outro para adicionar um eletrodomestico, neste caso o utilizador vai ter de colocar os dados respetivos ao eletromoéstico para o adicionar com sucesso.
-4. Se o utilizador não quiser fazer nenhuma destas opções ser-lhe-á dada a opção de voltar a trás através dum botão localizado no canto inferior direito da página.
+1. Na home page, será apresentado ao utilizador um botão ao lado do seu custo elétrico, que perguntará ao utilizador se este quer estabelecer um objetivo para o quanto tenciona pagar ao mês no seu consumo elétrico. 
+2. Uma vez carregado no botão, o utilizador será levado para uma página onde vai poder introduzir o valor em euros de quanto tenciona gastar.
+3. O valor será guardado na base de dados e será mostrado ao utilizador qual a forma mais rápida de atingir esse valor, mostrando assim o eletrodomestico mais usado, incentivando o utilizador a tentar utilizá-lo menos.
 
 **Pós-condições:**
-N/A
+- Comunicação com a base de dados.
 
 
 ## Referências:
