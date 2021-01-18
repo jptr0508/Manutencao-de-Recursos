@@ -15,52 +15,52 @@ import javax.persistence.Table;
 public class Utilizador {
     @Id @GeneratedValue
     (strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id") int user_id;
-    @Column(name = "user_nome") String user_nome;
-    @Column(name = "user_idade" ) Date user_idade;
-    @Column(name = "user_sexo") char user_sexo;
-    @Column(name = "user_local") String user_local;
+    @Column(name = "utilizador_id") int utilizador_id;
+    @Column(name = "utilizador_nome") String utilizador_nome;
+    @Column(name = "utilizador_bd_date" ) Date utilizador_bd_date;
+    @Column(name = "utilizador_sexo") char utilizador_sexo;
+    @Column(name = "utilizador_local") String utilizador_local;
 
   public Utilizador() {  }
 
     public String getUser_nome() {
-        return user_nome;
+        return utilizador_nome;
     }
 
-    public void setUser_nome(String user_nome) {
-        this.user_nome = user_nome;
+    public void setUser_nome(String utilizador_nome) {
+        this.utilizador_nome = utilizador_nome;
     }
 
-    public Date getUser_idade() {
-        return user_idade;
+    public Date getUser_date() {
+        return utilizador_bd_date;
     }
 
-    public void setUser_idade(Date user_idade) {
-        this.user_idade = user_idade;
+    public void setUser_idade(Date utilizador_bd_date) {
+        this.utilizador_bd_date = utilizador_bd_date;
     }
 
     public char getUser_sexo() {
-        return user_sexo;
+        return utilizador_sexo;
     }
 
-    public void setUser_sexo(char user_sexo) {
-        this.user_sexo = user_sexo;
+    public void setUser_sexo(char utilizador_sexo) {
+        this.utilizador_sexo = utilizador_sexo;
     }
 
     public String getUser_local() {
-        return user_local;
+        return utilizador_local;
     }
 
-    public void setUser_local(String user_local) {
-        this.user_local = user_local;
+    public void setUser_local(String utilizador_local) {
+        this.utilizador_local = utilizador_local;
     }
 
     public int getUser_id() {
-        return user_id;
+        return utilizador_id;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUser_id(int utilizador_id) {
+        this.utilizador_id = utilizador_id;
     }
 
     

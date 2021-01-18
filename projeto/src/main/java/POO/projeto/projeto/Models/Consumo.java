@@ -18,10 +18,12 @@ public class Consumo {
     @Id@GeneratedValue
     @Column(name = "consumo_id") private int consumo_id;
     @Column(name = "consumo_data") Date consumo_data;
-    @Column(name = "consumo_quantidade") double consumo_quantidade;
-    @Column(name = "tipo") boolean tipo;
-    @OneToMany @JoinColumn(name = "eletro_id")
+    @Column(name = "consumo_tempo_on") double consumo_tempo_on;
+    @Column(name = "consumo_energia") double consumo_energia;
+    @OneToMany @JoinColumn(name = "consumo_eletro_id")
     private List<Eletrodomestico> eletrodomestico;
+    @OneToMany @JoinColumn(name = "consumo_utilizador_id")
+    private List<Utilizador> utilizador;
 
     public Consumo() {}
     @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,20 +43,20 @@ public class Consumo {
         this.consumo_data = consumo_data;
     }
 
-    public double getConsumo_quantidade() {
-        return consumo_quantidade;
+    public double getConsumo_tempo_on() {
+        return consumo_tempo_on;
     }
 
-    public void setConsumo_quantidade(double consumo_quantidade) {
-        this.consumo_quantidade = consumo_quantidade;
+    public void setConsumo_tempo_on(double consumo_tempo_on) {
+        this.consumo_tempo_on = consumo_tempo_on;
     }
 
-    public boolean getTipo() {
-        return tipo;
+    public double getConsumo_energia() {
+        return consumo_energia;
     }
 
-    public void setTipo(boolean tipo) {
-        this.tipo = tipo;
+    public void setConsumo_energia(double consumo_energia) {
+        this.consumo_energia = consumo_energia;
     }
     
     
