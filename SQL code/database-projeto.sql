@@ -11,7 +11,8 @@ create table utilizador(utilizador_id int not null auto_increment,
                         
 create table consumo(consumo_id int not null auto_increment,
                      consumo_data date not null,
-                     consumo_quantidade double,
+                     consumo_energia double,
+		     consumo_tempo_on int,
                      consumo_eletro_id int,
                      consumo_utilizador_id int,
                      primary key(consumo_id));
@@ -34,8 +35,7 @@ create table conta(conta_id int not null auto_increment,
                      
 create table eletrodomestico(eletro_id int not null auto_increment,
                              eletro_nome varchar(30),
-                             eletro_consumo double not null,
-                             eletro_tempo_on int not null,
+                             eletro_potencia double not null,
                              eletro_isEletrico boolean,
                              eletro_utilizador_id int,
                              primary key(eletro_id));
