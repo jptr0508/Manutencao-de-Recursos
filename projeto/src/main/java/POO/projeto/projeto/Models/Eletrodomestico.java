@@ -26,7 +26,8 @@ public class Eletrodomestico {
     @ManyToOne @JoinColumn(name = "eletro_utilizador_id")
     private List<Utilizador> utilizador;
 
-    public Eletrodomestico() {}
+    public Eletrodomestico() {
+    }
 
     public int getEletro_id() {
         return eletro_id;
@@ -52,11 +53,11 @@ public class Eletrodomestico {
         this.eletro_potencia = eletro_potencia;
     }
 
-    public boolean getEletro_isEletrico() {
+    public boolean isEletro_isEletrico() {
         return eletro_isEletrico;
     }
 
     public void setEletro_isEletrico(boolean eletro_isEletrico) {
         this.eletro_isEletrico = eletro_isEletrico;
-    }    
+    }
 }

@@ -54,6 +54,7 @@ public Eletrodomestico getTipo(@PathVariable boolean tipo) {
 @PostMapping(path="", produces=MediaType.APPLICATION_JSON_VALUE)
 public Eletrodomestico saveEletrodomestico(@RequestBody Eletrodomestico eletrodomestico){
     Eletrodomestico savedEletrodomestico = EletrodomesticoRepository.save(eletrodomestico);
+    
 logger.info("Saving eletrodomestico with id "+savedEletrodomestico.getEletro_id());
 return savedEletrodomestico;
 }
