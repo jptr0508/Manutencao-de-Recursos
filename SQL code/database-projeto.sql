@@ -11,31 +11,31 @@ create table utilizador(utilizador_id int not null auto_increment,
                         
 create table consumo(consumo_id int not null auto_increment,
                      consumo_data date not null,
-                     consumo_quantidade double,
+                     consumo_energia double,
+		     consumo_tempo_on int,
                      consumo_eletro_id int,
                      consumo_utilizador_id int,
                      primary key(consumo_id));
                           
 create table objetivo(objetivo_id int not null auto_increment,
-				      objetivo_mes int,
-				      objetivo double,
-                      objetivo_custo double,
-                      objetivo_utilizador_id int,
+				      objetivo_meta double,
                       primary key(objetivo_id));
 
-create table objetivoplano(objetivoplano_id int not null,
-                           objplan_mes int not null,
-                           primary key(objetivoplano_id));
+create table objetivoconta(objetivoconta_id int,
+                           objetivoconta_utilizador_id int,
+                           objetivoconta_conta_id int,
+                           objetivoconta_objetivo_id int,
+                           primary key(objetivoconta_id)); 
 
-create table plano(plan_id int not null auto_increment,
-				   nome varchar(50),
-				   custo double,
-                   primary key(plan_id));
+create table conta(conta_id int not null auto_increment,
+				   conta_mes varchar(20),
+                   conta_custo double,
+                   conta_utilizador_id int,
+                   primary key(conta_id));
                      
 create table eletrodomestico(eletro_id int not null auto_increment,
                              eletro_nome varchar(30),
-                             eletro_consumo double not null,
-                             eletro_tempo_on int not null,
+                             eletro_potencia double not null,
                              eletro_isEletrico boolean,
                              eletro_utilizador_id int,
                              primary key(eletro_id));
@@ -50,18 +50,22 @@ alter table consumo add constraint consumo_fk_eletrodomestico
             foreign key(consumo_eletro_id) references eletrodomestico(eletro_id)
             ON DELETE NO ACTION ON UPDATE NO ACTION;
             
-alter table objetivo add constraint objetivo_fk_utilizador
-            foreign key(objetivo_utilizador_id) references utilizador(utilizador_id)
+alter table conta add constraint conta_fk_utilizador
+            foreign key(conta_utilizador_id) references utilizador(utilizador_id)
             ON DELETE NO ACTION ON UPDATE NO ACTION;
             
 alter table eletrodomestico add constraint eletrodomestico_fk_utilizador
             foreign key(eletro_utilizador_id) references utilizador(utilizador_id)
             ON DELETE NO ACTION ON UPDATE NO ACTION;
             
-alter table objetivoplano add constraint objetivoplano_fk_objetivo
-            foreign key(objetivoplano_id) references objetivo(objetivo_id)
+alter table objetivoconta add constraint objetivoconta_fk_objetivo
+            foreign key(objetivoconta_objetivo_id) references objetivo(objetivo_id)
             ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-alter table objetivoplano add constraint objetivoplano_fk_plano
-            foreign key(objetivoplano_id) references plano(plan_id)
+alter table objetivoconta add constraint objetivoconta_fk_conta
+            foreign key(objetivoconta_conta_id) references conta(conta_id)
+            ON DELETE NO ACTION ON UPDATE NO ACTION;
+            
+alter table objetivoconta add constraint objetivoconta_fk_utilizador
+            foreign key(objetivoconta_utilizador_id) references utilizador(utilizador_id)
             ON DELETE NO ACTION ON UPDATE NO ACTION;
