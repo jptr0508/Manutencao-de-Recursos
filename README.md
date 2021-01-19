@@ -20,7 +20,7 @@ Para este trabalho se concretizar vamos recorrer a diversos sites, tais como a I
 
 ## Casos de utilização:
 
-### Visualizacao do custo da energia consumida e da energia total consumida.
+### Visualização do custo da energia consumida e da energia total consumida.
 **Descrição:** \
 Na página principal será mostrado ao utilizador o custo mensal da energia consumida, bem como a participação energética de cada eletrodoméstico.
 Se o utilizador ainda nao possuir nenhum eletrodoméstico registado, ser-lhe-á pedido que registe pelo menos um eletrodoméstico.
