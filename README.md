@@ -59,7 +59,7 @@ N/A
 
 ### Adicionar um novo consumo.
 **Descrição:** \
-O uttilizador poderá adicionar um novo consumo de uma nova semana.
+O utilizador poderá adicionar um novo consumo de uma nova semana.
 
 **Pré-condições:**
 N/A
