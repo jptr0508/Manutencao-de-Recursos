@@ -1,7 +1,5 @@
 package POO.projeto.projeto.Models;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +22,7 @@ public class Eletrodomestico {
     @JsonIgnore
     @Column(name = "eletro_isEletrico") private boolean eletro_isEletrico;
     @ManyToOne @JoinColumn(name = "eletro_utilizador_id")
-    private List<Utilizador> utilizador;
+    private Utilizador utilizador;
 
     public Eletrodomestico() {
     }
@@ -60,4 +58,13 @@ public class Eletrodomestico {
     public void setEletro_isEletrico(boolean eletro_isEletrico) {
         this.eletro_isEletrico = eletro_isEletrico;
     }
+
+    public Utilizador getUtilizador() {
+        return utilizador;
+    }
+
+    public void setUtilizador(Utilizador utilizador) {
+        this.utilizador = utilizador;
+    }
+
 }
