@@ -9,7 +9,7 @@ import POO.projeto.projeto.View.EletrodomesticoView;
 
 public interface EletrodomesticoRepository extends CrudRepository<Eletrodomestico, Integer>{
     
-  String eletrodomesticoQuery = "SELECT eletro_id as ID, eletro_nome as nome, eletro_potencia as potencia from eletrodomestico where eletro_utilizador_id = :utilizador_id";
+  String eletrodomesticoQuery = "SELECT eletro_id, eletro_nome, eletro_potencia from eletrodomestico where eletro_utilizador_id = :utilizador_id";
     
 
   @Query(value=eletrodomesticoQuery, nativeQuery=true)
