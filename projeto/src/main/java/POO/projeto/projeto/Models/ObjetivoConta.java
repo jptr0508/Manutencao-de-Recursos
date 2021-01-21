@@ -1,6 +1,6 @@
 package POO.projeto.projeto.Models;
 
-import java.util.List;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,23 +16,49 @@ import javax.persistence.Table;
 public class ObjetivoConta {
     @Id@GeneratedValue
     (strategy = GenerationType.IDENTITY)
-    @Column(name = "objetivoconta_conta_id") int objetivoconta_conta_id;
+    @Column(name = "objetivoconta_id") int objetivoconta_conta_id;
     @ManyToOne @JoinColumn(name = "objetivoconta_utilizador_id")
-    private List<Utilizador> utilizador;
+    private Utilizador utilizador;
     @ManyToOne @JoinColumn(name = "objetivoconta_conta_id")
-    private List<Conta> conta;
+    private Conta conta;
     @ManyToOne @JoinColumn(name = "objetivoconta_objetivo_id")
-    private List<Objetivo> objetivo;
+    private Objetivo objetivo;
 
-    public ObjetivoConta(){
+    public ObjetivoConta(){}
 
+  
+
+    public Utilizador getUtilizador() {
+        return utilizador;
     }
 
-    public int getObjetivoConta() {
+    public void setUtilizador(Utilizador utilizador) {
+        this.utilizador = utilizador;
+    }
+
+    public Conta getConta() {
+        return conta;
+    }
+
+    public void setConta(Conta conta) {
+        this.conta = conta;
+    }
+
+    public Objetivo getObjetivo() {
+        return objetivo;
+    }
+
+    public void setObjetivo(Objetivo objetivo) {
+        this.objetivo = objetivo;
+    }
+
+    public int getObjetivoconta_conta_id() {
         return objetivoconta_conta_id;
     }
 
-    public void setObjetivoConta(int objetivoconta_conta_id) {
+    public void setObjetivoconta_conta_id(int objetivoconta_conta_id) {
         this.objetivoconta_conta_id = objetivoconta_conta_id;
     }
+
+   
 }

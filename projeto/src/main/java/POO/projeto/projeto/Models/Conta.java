@@ -20,7 +20,7 @@ public class Conta {
    @Column(name = "conta_mes") private String conta_mes;
    @Column(name = "conta_custo") private double conta_custo;
    @ManyToOne @JoinColumn(name = "conta_utilizador_id")
-    private List<Utilizador> utilizador;
+    private Utilizador utilizador;
 //enrollment
     public Conta() {
     }
