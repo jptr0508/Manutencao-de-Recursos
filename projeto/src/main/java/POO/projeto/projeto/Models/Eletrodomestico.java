@@ -20,7 +20,6 @@ public class Eletrodomestico {
     @Column(name = "eletro_nome") private String eletro_nome;
     @Column(name = "eletro_potencia") private double eletro_potencia;
     @JsonIgnore
-    @Column(name = "eletro_iseletrico") private boolean eletro_isEletrico;
     @ManyToOne @JoinColumn(name = "eletro_utilizador_id")
     private Utilizador utilizador;
 
@@ -49,14 +48,6 @@ public class Eletrodomestico {
 
     public void setEletro_potencia(double eletro_potencia) {
         this.eletro_potencia = eletro_potencia;
-    }
-
-    public boolean isEletro_isEletrico() {
-        return eletro_isEletrico;
-    }
-
-    public void setEletro_isEletrico(boolean eletro_isEletrico) {
-        this.eletro_isEletrico = eletro_isEletrico;
     }
 
     public Utilizador getUtilizador() {
