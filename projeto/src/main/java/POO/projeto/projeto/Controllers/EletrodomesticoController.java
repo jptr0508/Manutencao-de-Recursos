@@ -29,7 +29,6 @@ logger.info("Sending all Eletrodomesticos that belongs to the user with the id" 
 return EletrodomesticoRepository.findUserEletro(utilizador_id);
 } 
 
-
 /*@GetMapping(path ="/{tipo:[false,true]+}", produces= MediaType.APPLICATION_JSON_VALUE)
 public Eletrodomestico getTipo(@PathVariable boolean tipo) {
     logger.info("Sending eletrodomesticos that are powered by electricity "+tipo);
@@ -40,12 +39,12 @@ public Eletrodomestico getTipo(@PathVariable boolean tipo) {
     return eletrodomestico.get();
 //erro no return
 }*/
+
 @PostMapping(path="", produces=MediaType.APPLICATION_JSON_VALUE)
 public Eletrodomestico saveEletrodomestico(@RequestBody Eletrodomestico eletrodomestico){
+    logger.info("Saving eletrodomestico with id "+eletrodomestico.getEletro_id());
     Eletrodomestico savedEletrodomestico = EletrodomesticoRepository.save(eletrodomestico);
-
-logger.info("Saving eletrodomestico with id "+savedEletrodomestico.getEletro_id());
-return savedEletrodomestico;
+    return savedEletrodomestico;
 }
 
 }

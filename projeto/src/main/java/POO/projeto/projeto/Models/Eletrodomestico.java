@@ -20,7 +20,7 @@ public class Eletrodomestico {
     @Column(name = "eletro_nome") private String eletro_nome;
     @Column(name = "eletro_potencia") private double eletro_potencia;
     @JsonIgnore
-    @Column(name = "eletro_isEletrico") private boolean eletro_isEletrico;
+    @Column(name = "eletro_iseletrico") private boolean eletro_isEletrico;
     @ManyToOne @JoinColumn(name = "eletro_utilizador_id")
     private Utilizador utilizador;
 

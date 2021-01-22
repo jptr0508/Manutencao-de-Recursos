@@ -21,7 +21,8 @@ public class UtilizadorController {
     private Logger logger = LoggerFactory.getLogger(EletrodomesticoController.class);
     @Autowired
     private UtilizadorRepository utilizadorRepository;
-    @GetMapping(path ="/{user_id:[1-9]+}", produces= MediaType.APPLICATION_JSON_VALUE)
+
+    @GetMapping(path ="", produces= MediaType.APPLICATION_JSON_VALUE)
     public Utilizador getTipo(@PathVariable int user_id) {
         logger.info("Sending eletrodomesticos that correspont to the id "+user_id);
         Optional<Utilizador> _utilizador= utilizadorRepository.findById(user_id);

@@ -1,7 +1,5 @@
 package POO.projeto.projeto.Models;
 
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
