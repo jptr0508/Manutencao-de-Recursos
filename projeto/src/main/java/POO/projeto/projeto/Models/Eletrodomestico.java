@@ -9,8 +9,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity
 @Table(name = "eletrodomestico")
 public class Eletrodomestico {
@@ -19,7 +17,6 @@ public class Eletrodomestico {
     @Column(name = "eletro_id") int eletro_id;
     @Column(name = "eletro_nome") private String eletro_nome;
     @Column(name = "eletro_potencia") private double eletro_potencia;
-    @JsonIgnore
     @ManyToOne @JoinColumn(name = "eletro_utilizador_id")
     private Utilizador utilizador;
 
@@ -54,8 +51,5 @@ public class Eletrodomestico {
         return utilizador;
     }
 
-    public void setUtilizador(Utilizador utilizador) {
-        this.utilizador = utilizador;
-    }
-
+   
 }

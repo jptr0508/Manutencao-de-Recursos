@@ -18,12 +18,12 @@ import POO.projeto.projeto.View.EletrodomesticoView;
 
 
     @RestController
-@RequestMapping(path="/api/eletrodomesticos/{utilizador_id}")
+@RequestMapping(path="/api/eletrodomesticos")
 public class EletrodomesticoController {
 private Logger logger = LoggerFactory.getLogger(EletrodomesticoController.class);
 @Autowired
 private EletrodomesticoRepository EletrodomesticoRepository;
-@GetMapping(path ="", produces= MediaType.APPLICATION_JSON_VALUE)
+@GetMapping(path ="/{utilizador_id}", produces= MediaType.APPLICATION_JSON_VALUE)
 public Iterable<EletrodomesticoView> findUserEletro(@PathVariable int utilizador_id) {
 logger.info("Sending all Eletrodomesticos that belongs to the user with the id" + utilizador_id);
 return EletrodomesticoRepository.findUserEletro(utilizador_id);
@@ -31,9 +31,10 @@ return EletrodomesticoRepository.findUserEletro(utilizador_id);
 
 
 
-@PostMapping(path="", produces=MediaType.APPLICATION_JSON_VALUE)
+@PostMapping(path ="", produces=MediaType.APPLICATION_JSON_VALUE)
 public Eletrodomestico saveEletrodomestico(@RequestBody Eletrodomestico eletrodomestico){
     logger.info("Saving eletrodomestico with id "+eletrodomestico.getEletro_id());
+    logger.info(""+eletrodomestico.getUtilizador());
     Eletrodomestico savedEletrodomestico = EletrodomesticoRepository.save(eletrodomestico);
     return savedEletrodomestico;
 }

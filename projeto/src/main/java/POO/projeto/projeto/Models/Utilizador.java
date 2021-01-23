@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Utilizador {
     @Id @GeneratedValue
     (strategy = GenerationType.IDENTITY)
-    @Column(name = "utilizador_id") int utilizador_id;
+    @Column(name = "utilizador_id") int id;
     @Column(name = "utilizador_nome") String utilizador_nome;
     @Column(name = "utilizador_bd_date" ) Date utilizador_bd_date;
     @Column(name = "utilizador_sexo") char utilizador_sexo;
@@ -55,13 +55,15 @@ public class Utilizador {
         this.utilizador_local = utilizador_local;
     }
 
-    public int getUser_id() {
-        return utilizador_id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setUser_id(int utilizador_id) {
-        this.utilizador_id = utilizador_id;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
+
+    
 
     
     

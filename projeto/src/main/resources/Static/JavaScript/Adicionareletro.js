@@ -23,17 +23,17 @@ async function AddElet() {
         let eletrodomestico = {
             eletro_nome: document.getElementById("eletro_nome").value,
             eletro_potencia: document.getElementById("eletro_potencia").value,
-            utilizador_id:  utilizador_id
+            utilizador: { id: utilizador_id}
         }
         alert(JSON.stringify(eletrodomestico));
         let result = await $.ajax({
-            url: "/api/eletrodomesticos/"+utilizador_id,
+            url: "/api/eletrodomesticos/",
             method: "post",
             dataType: "json",
             data:JSON.stringify(eletrodomestico),
             contentType: "application/json"
         });
-        console.log(JSON.stringify(result));
+        alert(JSON.stringify(result));
         // Change to eletrodomesticos page
         sessionStorage.setItem("eletro_id",result.id);
         window.location = "MostrarEletro.html";
