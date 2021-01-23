@@ -2,13 +2,13 @@ var utilizador_id=1;
 
 window.onload = async function() {
     try {
-        let res = await $.ajax({
-            url: "/api/eletrodomesticos/" + utilizador_id, method: "get",
+        let utilizadores = await $.ajax({
+            url: "/api/eletrodomesticos/", method: "get",
             dataType: "json"
         });
-        let html="";
-        for (let utilizador of res) {
-            html+="<p>"+utilizador_id+"</p>";
+        let html=utilizador_id;
+        for (let utilizador of utilizadores) {
+            html+="<p>"+utilizador.utilizador_id+"</p>";
         }
         document.getElementById("utilizador").innerHTML = html;
     } catch (err) {
@@ -18,14 +18,14 @@ window.onload = async function() {
 }
 
 
-async function AddEletro() {
+async function AddElet() {
     try {
         let eletrodomestico = {
             eletro_nome: document.getElementById("eletro_nome").value,
             eletro_potencia: document.getElementById("eletro_potencia").value,
-            utilizador: { id: utilizador_id }
+            utilizador_id:  utilizador_id
         }
-        console.log(JSON.stringify(eletrodomestico));
+        alert(JSON.stringify(eletrodomestico));
         let result = await $.ajax({
             url: "/api/eletrodomesticos/"+utilizador_id,
             method: "post",
@@ -34,7 +34,7 @@ async function AddEletro() {
             contentType: "application/json"
         });
         console.log(JSON.stringify(result));
-        // Change to album page
+        // Change to eletrodomesticos page
         sessionStorage.setItem("eletro_id",result.id);
         window.location = "MostrarEletro.html";
     } catch(err) {
