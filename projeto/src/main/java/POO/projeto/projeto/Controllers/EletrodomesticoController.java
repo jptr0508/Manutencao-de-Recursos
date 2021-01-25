@@ -17,7 +17,7 @@ import POO.projeto.projeto.Repository.EletrodomesticoRepository;
 import POO.projeto.projeto.View.EletrodomesticoView;
 
 
-    @RestController
+@RestController
 @RequestMapping(path="/api/eletrodomesticos")
 public class EletrodomesticoController {
 private Logger logger = LoggerFactory.getLogger(EletrodomesticoController.class);
@@ -38,7 +38,4 @@ public Eletrodomestico saveEletrodomestico(@RequestBody Eletrodomestico eletrodo
     Eletrodomestico savedEletrodomestico = EletrodomesticoRepository.save(eletrodomestico);
     return savedEletrodomestico;
 }
-
 }
-    
-
