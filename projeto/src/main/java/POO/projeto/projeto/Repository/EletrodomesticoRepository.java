@@ -16,12 +16,4 @@ public interface EletrodomesticoRepository extends CrudRepository<Eletrodomestic
 
   @Query(value=eletrodomesticoQuery, nativeQuery=true)
     Iterable<EletrodomesticoView> findUserEletro(@Param("utilizador_id") int utilizador_id);
-
-
-    
-  
- /* String addEletrodomesticoQuery = "Insert into eletrodomestico (eletro_nome, eletro_potencia, eletro_utilizador_id) values (:#{eletro_nome, eletro_potencia, eletro_utilizador_id})";
-  @Query(value=addEletrodomesticoQuery, nativeQuery=true)
-    Iterable<EletrodomesticoView> addEletroUser(@Param("eletro_utilizador_id") int utilizador_id, @Param("eletro_nome") String eletro_nome);
-*/
   }
