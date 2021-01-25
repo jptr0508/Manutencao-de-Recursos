@@ -1,10 +1,8 @@
 package POO.projeto.projeto.Repository;
 
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.transaction.annotation.Transactional;
 
 import POO.projeto.projeto.Models.Eletrodomestico;
 import POO.projeto.projeto.View.EletrodomesticoView;
@@ -16,12 +14,4 @@ public interface EletrodomesticoRepository extends CrudRepository<Eletrodomestic
 
   @Query(value=eletrodomesticoQuery, nativeQuery=true)
     Iterable<EletrodomesticoView> findUserEletro(@Param("utilizador_id") int utilizador_id);
-
-
-    
-  
- /* String addEletrodomesticoQuery = "Insert into eletrodomestico (eletro_nome, eletro_potencia, eletro_utilizador_id) values (:#{eletro_nome, eletro_potencia, eletro_utilizador_id})";
-  @Query(value=addEletrodomesticoQuery, nativeQuery=true)
-    Iterable<EletrodomesticoView> addEletroUser(@Param("eletro_utilizador_id") int utilizador_id, @Param("eletro_nome") String eletro_nome);
-*/
-  }
+}

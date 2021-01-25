@@ -14,6 +14,4 @@ public interface ConsumoRepository extends CrudRepository<Consumo, Integer>{
     @Query(value=consumoQuery, nativeQuery=true)
     Iterable<ConsumoView> findUserConsumo(@Param("utilizador_id") int utilizador_id);
     
-    String addconsumoQuery = "Insert into consumo (consumo_data, consumo_tempo_on, consumo_energia, consumo_utilizador_id) values (:#{#consumo.consumo_data, consumo.consumo_tempo_on, consumo.consumo_energia, consumo.consumo_utilizador_id})";
-
-}
+  }
