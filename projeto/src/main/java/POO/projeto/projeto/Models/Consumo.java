@@ -31,8 +31,6 @@ public class Consumo {
         return consumo_id;
     }
 
-    
-
     public Date getConsumo_data() {
         return consumo_data;
     }
