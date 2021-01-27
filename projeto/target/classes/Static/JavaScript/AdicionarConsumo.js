@@ -1,4 +1,5 @@
 var utilizador_id=1;
+var eletrodomesticos;
 
 window.onload = async function() {
     try {
@@ -18,7 +19,7 @@ window.onload = async function() {
     }
 
     try {
-        let eletrodomesticos = await $.ajax({
+            eletrodomesticos = await $.ajax({
             url: "/api/eletrodomesticos/" + utilizador_id, 
             method: "get",
             dataType: "json"
@@ -46,17 +47,11 @@ async function AddCons() {
         }
 
         alert(JSON.stringify(consumo));
-        let consumof = {
-            consumo,
-            consumo_energia: (eletrodomestico.eletro_potencia * consumo.consumo_tempo_on)/1000
-        }
-
-        alert(JSON.stringify(consumof));
         let result = await $.ajax({
             url: "/api/consumos/",
             method: "post",
             dataType: "json",
-            data:JSON.stringify(consumof),
+            data:JSON.stringify(consumo),
             contentType: "application/json"
         });
 
