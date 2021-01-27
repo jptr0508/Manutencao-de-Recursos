@@ -1,0 +1,76 @@
+form{
+	padding: 30px 50px;
+    background-color: #f6f7f8;
+}
+
+label{
+    font-size: 20px;
+}
+
+select{
+    margin-bottom: 20px;
+    padding: 8px;
+    border: #d6d9dc solid 1px;
+	border-radius: 5px;
+    width: 50%;
+}
+
+select:focus{
+    background-color: #f6f7f8;
+}
+
+.p, h1{
+    margin-bottom: 20px;
+}
+
+input[type=date]{
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: #d6d9dc solid 1px;
+	border-radius: 5px;
+}
+
+input[type=number]{
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: #d6d9dc solid 1px;
+	border-radius: 5px;
+}
+
+input[type=text]{
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: #d6d9dc solid 1px;
+	border-radius: 5px;
+}
+
+.confirm{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #5995da;
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.back{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #5995da;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.back:hover, .confirm:hover{
+    background-color: #76aeed;
+}

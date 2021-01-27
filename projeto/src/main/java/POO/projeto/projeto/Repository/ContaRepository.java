@@ -1,4 +1,4 @@
-package POO.projeto.projeto.Repository;
+/*package POO.projeto.projeto.Repository;
 
 import java.lang.reflect.Array;
 
@@ -11,4 +11,4 @@ public interface ContaRepository extends CrudRepository<Conta, Integer> {
     int getCustoSemana(Array[] consumo);
 
 
-}
+}*/

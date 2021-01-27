@@ -2,19 +2,52 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> Adicionar_consumo </title>
+        <title> Manutenção de Recursos </title>
+        <link rel="stylesheet" href="stylesheets/Mostrar.css">
+        <link rel="stylesheet" href="stylesheets/Adicionar.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="./JavaScript/AdicionarConsumo.js"></script>
     </head>
     
     <body>
-        <header> Adicionar Consumo </header>       
-        <main>
-            <h2>Data: <input type="date" id="consumo_data"></h2>
-            <h2>Tempo Ligado: <input type="number" id="consumo_tempo_on"></h2>
+        <div class="menu-container">
+
+            <div class="menu">
+                <div class="titulo">Manutenção de Recursos</div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="MostrarConsumo.html">Consumo</a></li>
+                            <li><a href="#">Conta</a></li>
+                            <li><a href="MostrarEletro.html">Eletrodomésticos</a></li>
+                            <li><input class="add" type="button" value="+" onclick="window.location.href='AdicionarConsumo.html'" ></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>  
+        </div>
+               
+        <form>
+            <h1>A Adicionar Consumo</h1>
+
+            <p class="p"> <label for="nome"> Nome do Eletrodoméstico </label> </p>
+            <select id="eletrodomestico"></select>
+
+            <p class="p"> <label for="data"> Data </label> </p>
+            <input type="date" id="consumo_data">
+
+            <p class="p"> <label for="tempo on"> Tempo Ligado </label> </p>
+            <input type="number" min="1" id="consumo_tempo_on">
             
-            <h2><input type="button" value="Adicionar" onclick="AddElet()"></h2> 
-            <h2><input type="button" value="Back" onclick="window.location.href= 'MostrarConsumo.html'"></h2>
-        </main>
+            <p class="p"> <input class="confirm" type="button" value="Adicionar" onclick="AddCons()"></p> 
+            <p class="p"> <input class="back" type="button" value="Back" onclick="window.location.href= 'MostrarConsumo.html'"></p>
+
+        </form>
+
+        <div class="develop-container">
+            <div class="develop">
+                <p>Developed by João Rolo and Tomás Ferreira</p>
+            </div>
+        </div>
     </body>
 </html>

@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <title>Show eletrodomesticos that belong to the user</title>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="./JavaScript/Eletrodomestico.js "></script>
-</head>
-<body>
- <section id="eletrodomesticos">
- </section>
- <h2><input type="button" value="Adicionar um Eletrodomestico" onclick="window.location.href='AdicionarEletro.html'" ></a></h2>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Manutenção de Recursos</title>
+        <link rel="stylesheet" href="stylesheets/Mostrar.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./JavaScript/Eletrodomestico.js "></script>
+    </head>
+    
+    <body>
+        <div class="menu-container">
+
+            <div class="menu">
+                <div class="titulo">Manutenção de Recursos</div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="MostrarConsumo.html">Consumo</a></li>
+                            <li><a href="#">Conta</a></li>
+                            <li><a href="MostrarEletro.html">Eletrodomésticos</a></li>
+                            <li><input class="add" type="button" value="+" onclick="window.location.href='AdicionarEletro.html'" ></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>  
+        </div>
+        
+        <h1> Os Seus Eletrodomésticos</h1>
+
+        <section id="eletrodomesticos"></section>
+
+        <div class="develop-container">
+            <div class="develop">
+                <p>Developed by João Rolo and Tomás Ferreira</p>
+            </div>
+        </div>
+    </body>
 </html>

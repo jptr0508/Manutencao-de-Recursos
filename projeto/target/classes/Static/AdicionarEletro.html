@@ -2,20 +2,49 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> Adicionar_eletrodomestico </title>
+        <title> Manutenção de Recursos </title>
+        <link rel="stylesheet" href="stylesheets/Mostrar.css">
+        <link rel="stylesheet" href="stylesheets/Adicionar.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="./JavaScript/Adicionareletro.js"></script>
     </head>
     
     <body>
-        <header> Adicionar Eletrodomestico </header>       
-        <main >
+        <div class="menu-container">
+
+            <div class="menu">
+                <div class="titulo">Manutenção de Recursos</div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="MostrarConsumo.html">Consumo</a></li>
+                            <li><a href="#">Conta</a></li>
+                            <li><a href="MostrarEletro.html">Eletrodomésticos</a></li>
+                            <li><input class="add" type="button" value="+" onclick="window.location.href='AdicionarEletro.html'" ></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>  
+        </div>
+               
+        <form>
+            <h1>A Adicionar Eletrodoméstico</h1>
+
+            <p class="p"> <label for="nome"> Nome</label> </p>
+            <input type="text" id="eletro_nome">
+
+            <p class="p"> <label for="potencia"> Potência </label> </p>
+            <input type="number" min="1" id="eletro_potencia">
             
-            <h2>Nome: <input type="text" id="eletro_nome"></h2>
-            <h2>Potencia: <input type="number" id="eletro_potencia"></h2>
-            
-            <h2><input type="button" value="Adicionar" onclick="AddElet()"></h2> 
-            <h2><input type="button" value="Back" onclick="window.location.href= 'MostrarEletro.html'"></h2>
-        </main>
+            <p class="p"> <input class="confirm" type="button" value="Adicionar" onclick="AddElet()"></p> 
+            <p class="p"> <input class="back" type="button" value="Back" onclick="window.location.href= 'MostrarEletro.html'"></p>
+
+        </form>
+
+        <div class="develop-container">
+            <div class="develop">
+                <p>Developed by João Rolo and Tomás Ferreira</p>
+            </div>
+        </div>
     </body>
 </html>

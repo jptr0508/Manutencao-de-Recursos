@@ -2,15 +2,38 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Show consumos that belong to the user</title>
+        <title>Manutenção de Recursos</title>
+        <link rel="stylesheet" href="stylesheets/Mostrar.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="./JavaScript/Consumo.js"></script>
     </head>
     
     <body>
+        <div class="menu-container">
+
+            <div class="menu">
+                <div class="titulo">Manutenção de Recursos</div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="MostrarConsumo.html">Consumo</a></li>
+                            <li><a href="#">Conta</a></li>
+                            <li><a href="MostrarEletro.html">Eletrodomésticos</a></li>
+                            <li><input class="add" type="button" value="+" onclick="window.location.href='AdicionarConsumo.html'" ></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>  
+        </div>
+
+        <h1> Os Seus Consumos</h1>
+        
         <section id="consumos"></section>
-        <h2>
-            <input type="button" value="Adicionar um Consumo" onclick="window.location.href='AdicionarConsumo.html'" > </a>
-        </h2>
+
+        <div class="develop-container">
+            <div class="develop">
+                <p>Developed by João Rolo and Tomás Ferreira</p>
+            </div>
+        </div>
     </body>
 </html>

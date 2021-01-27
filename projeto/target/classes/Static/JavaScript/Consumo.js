@@ -9,7 +9,7 @@ window.onload = async function() {
 
     let html = "";
     for(let cons of res) {
-        html+= "<p>"+"id:" +cons.consumo_utilizador_id+" - Id eletro:"+cons.consumo_eletro_id+" - " + elet.eletro_potencia + "W"+"</p>";
+        html+= "<p>"+"Semana: "+cons.consumo_data+" - Tempo Ligado: " +cons.consumo_tempo_on+ " H"+" - Energia Consumida: "+cons.consumo_energia+ " kW"+"</p>";
     }
-    document.getElementById("eletrodomesticos").innerHTML = html;
+    document.getElementById("consumos").innerHTML = html;
 }
