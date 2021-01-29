@@ -20,5 +20,4 @@ public interface ContaRepository extends CrudRepository<Conta, Integer> {
     String mostrarContaQuery = "select conta_mes, conta_custo from conta where conta_utilizador_id= :utilizador_id";
     @Query(value = mostrarContaQuery, nativeQuery = true)
     Iterable<ContaView> mostrarContaUser(@Param("utilizador_id") int utilizador_id);
-
 }
