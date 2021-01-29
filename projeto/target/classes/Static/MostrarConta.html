@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title> Manutenção de Recursos </title>
+        <title>Manutenção de Recursos</title>
         <link rel="stylesheet" href="stylesheets/Mostrar.css">
-        <link rel="stylesheet" href="stylesheets/Adicionar.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="./JavaScript/Adicionareletro.js"></script>
+        <script src="./JavaScript/Conta.js"></script>
     </head>
     
     <body>
@@ -20,26 +19,16 @@
                             <li><a href="MostrarConsumo.html">Consumo</a></li>
                             <li><a href="MostrarConta.html">Conta</a></li>
                             <li><a href="MostrarEletro.html">Eletrodomésticos</a></li>
-                            <li><input class="add" type="button" value="+" onclick="window.location.href='AdicionarEletro.html'" ></li>
+                            <li><input class="add" type="button" value="+" onclick="window.location.href='#'" ></li>
                         </ul>
                     </nav>
                 </div>
             </div>  
         </div>
-               
-        <form>
-            <h1>A Adicionar Eletrodoméstico</h1>
 
-            <p class="p"> <label for="nome"> Nome</label> </p>
-            <input type="text" id="eletro_nome">
-
-            <p class="p"> <label for="potencia"> Potência </label> </p>
-            <input type="number" min="1" id="eletro_potencia">
-            
-            <p class="p"> <input class="confirm" type="button" value="Adicionar" onclick="AddElet()"></p> 
-            <p class="p"> <input class="back" type="button" value="Back" onclick="window.location.href= 'MostrarEletro.html'"></p>
-
-        </form>
+        <h1> A Sua Conta</h1>
+        
+        <section id="custos"></section>
 
         <div class="develop-container">
             <div class="develop">
