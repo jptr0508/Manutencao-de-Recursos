@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,16 +24,21 @@ public class EletrodomesticoController {
 private Logger logger = LoggerFactory.getLogger(EletrodomesticoController.class);
 @Autowired
 private EletrodomesticoRepository EletrodomesticoRepository;
-@GetMapping(path ="/{utilizador_id}", produces= MediaType.APPLICATION_JSON_VALUE)
-public Iterable<EletrodomesticoView> findUserEletro(@PathVariable int utilizador_id) {
-logger.info("Sending all Eletrodomesticos that belongs to the user with the id" + utilizador_id);
-return EletrodomesticoRepository.findUserEletro(utilizador_id);
-} 
+    @GetMapping(path ="/{utilizador_id}", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<EletrodomesticoView> findUserEletro(@PathVariable int utilizador_id) {
+    logger.info("Sending all Eletrodomesticos that belongs to the user with the id" + utilizador_id);
+    return EletrodomesticoRepository.findUserEletro(utilizador_id);
+    } 
 
+    @DeleteMapping(path = "/{utilizador_id}/{eletroId}", produces=MediaType.APPLICATION_JSON_VALUE)
+    public SimpleResult deleteUnit(@PathVariable int eletroId){
+        logger.info("Deleting unit with id "+eletroId);
+        EletrodomesticoRepository.deleteById(eletroId);
+        return new SimpleResult("Deleted unit with id "+eletroId+" (if id does not exists nothing was deleted)",null);
+    }
 
-
-@PostMapping(path ="", produces=MediaType.APPLICATION_JSON_VALUE)
-public Eletrodomestico saveEletrodomestico(@RequestBody Eletrodomestico eletrodomestico){
+    @PostMapping(path ="", produces=MediaType.APPLICATION_JSON_VALUE)
+    public Eletrodomestico saveEletrodomestico(@RequestBody Eletrodomestico eletrodomestico){
     logger.info("Saving eletrodomestico with id "+eletrodomestico.getEletro_id());
     logger.info(""+eletrodomestico.getUtilizador());
     Eletrodomestico savedEletrodomestico = EletrodomesticoRepository.save(eletrodomestico);

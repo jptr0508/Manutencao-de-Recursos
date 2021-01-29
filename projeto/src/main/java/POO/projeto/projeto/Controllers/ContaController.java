@@ -10,21 +10,24 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import POO.projeto.projeto.Models.Conta;
 import POO.projeto.projeto.Repository.ContaRepository;
+import POO.projeto.projeto.View.ContaView;
 
 @RestController
-@RequestMapping(path="/api/custos/{utilizador_id}/")
+@RequestMapping(path="/api/custos/{utilizador_id}")
 public class ContaController {
     private Logger logger = LoggerFactory.getLogger(ContaController.class);
     @Autowired
     private ContaRepository ContaRepository;
-    
+    @GetMapping(path ="", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<ContaView> mostrarContaUser(@PathVariable int utilizador_id) {
+        logger.info("Sending Custos that belongs to the user with the id" + utilizador_id);
+        return ContaRepository.mostrarContaUser(utilizador_id);
+    }
 
-    @PostMapping(path="{contaMes}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path="/{contaMes}", produces = MediaType.APPLICATION_JSON_VALUE)
     public int addContaUser(@PathVariable int utilizador_id, @PathVariable String contaMes){
         logger.info("Saving eletrodomestico with for the month"+ contaMes);
         return ContaRepository.addContaUser(utilizador_id, contaMes);
-    
     }
 }
