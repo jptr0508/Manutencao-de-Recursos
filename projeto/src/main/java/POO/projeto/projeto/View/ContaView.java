@@ -1,7 +1,7 @@
 package POO.projeto.projeto.View;
 
-
 public interface ContaView {
     String getConta_mes();
-    double getConta_custo();
+    Double getConta_custo();
+    int getConta_id();
 }

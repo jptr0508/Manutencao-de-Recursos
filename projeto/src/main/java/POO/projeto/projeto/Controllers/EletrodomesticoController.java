@@ -31,10 +31,10 @@ private EletrodomesticoRepository EletrodomesticoRepository;
     } 
 
     @DeleteMapping(path = "/{utilizador_id}/{eletroId}", produces=MediaType.APPLICATION_JSON_VALUE)
-    public SimpleResult deleteUnit(@PathVariable int eletroId){
-        logger.info("Deleting unit with id "+eletroId);
+    public SimpleResult deleteEletro(@PathVariable int eletroId){
+        logger.info("Deleting eletro with id "+eletroId);
         EletrodomesticoRepository.deleteById(eletroId);
-        return new SimpleResult("Deleted unit with id "+eletroId+" (if id does not exists nothing was deleted)",null);
+        return new SimpleResult("Deleted eletro with id "+eletroId+" (if id does not exists nothing was deleted)",null);
     }
 
     @PostMapping(path ="", produces=MediaType.APPLICATION_JSON_VALUE)

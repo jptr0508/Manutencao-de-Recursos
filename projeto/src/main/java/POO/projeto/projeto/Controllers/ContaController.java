@@ -28,8 +28,10 @@ public class ContaController {
     }
 
     @PostMapping(path="/{utilizador_id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public int addContaUser(@PathVariable int utilizador_id, @RequestBody Conta contaMes){
-        logger.info("Saving eletrodomestico with for the month"+ contaMes.toString());
-        return ContaRepository.addContaUser(utilizador_id, contaMes);
+    public int addContaUser(@PathVariable int utilizador_id, @RequestBody Conta conta){
+        
+        logger.info("Saving eletrodomestico with for the month "+ conta.getConta_mes());
+        logger.info(""+conta.getConta_custo());
+        return ContaRepository.addContaUser(utilizador_id, conta);
     }
 }

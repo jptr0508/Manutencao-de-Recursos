@@ -23,7 +23,7 @@ window.onload = async function() {
 async function AddCusto() {
     try {
         let conta = {
-            conta_mes: (document.getElementById("contaMes").value).toString(),
+            contaMes: (document.getElementById("contaMes").value),
             utilizador: { id: utilizador_id}
         }
 
