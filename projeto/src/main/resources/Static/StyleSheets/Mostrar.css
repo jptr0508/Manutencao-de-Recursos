@@ -35,7 +35,7 @@ body{
 }
 
 .develop{
-    display: inline-flex;
+    display: flex;
     text-align: left;
 }
 
