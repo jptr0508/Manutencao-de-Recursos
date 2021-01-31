@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <title>Manutenção de Recursos</title>
         <link rel="stylesheet" href="stylesheets/Mostrar.css">
+        <link rel="stylesheet" href="stylesheets/Remover.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="./JavaScript/Eletrodomestico.js "></script>
+        <script src="./JavaScript/RemoverEletro.js "></script>
     </head>
     
     <body>
@@ -19,7 +20,6 @@
                             <li><a href="MostrarConsumo.html">Consumo</a></li>
                             <li><a href="MostrarConta.html">Conta</a></li>
                             <li><a href="MostrarEletro.html">Eletrodomésticos</a></li>
-                            <li><input class="add" type="button" value="+" onclick="window.location.href='AdicionarEletro.html'" ></li>
                             <li><input class="add" type="button" value="-" onclick="window.location.href='RemoverEletro.html'" ></li>
                         </ul>
                     </nav>
@@ -27,9 +27,13 @@
             </div>  
         </div>
         
-        <h1> Os Seus Eletrodomésticos</h1>
+        <h1> Remover Eletrodoméstico</h1>
 
-        <section id="eletrodomesticos"></section>
+        <p class="p"> <label for="nome"> Eletrodoméstico </label> </p>
+        <select id="eletrodomestico"></select>
+
+        <p class="p"> <input class="confirm" type="button" value="Remover" onclick="RemElet()"></p> 
+        <p class="p"> <input class="back" type="button" value="Back" onclick="window.location.href= 'MostrarEletro.html'"></p>
 
         <div class="develop-container">
             <div class="develop">

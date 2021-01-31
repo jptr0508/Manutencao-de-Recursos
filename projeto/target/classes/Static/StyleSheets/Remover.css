@@ -1,0 +1,38 @@
+.p{
+    padding: 0px 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+select{
+    margin-bottom: 20px;
+    padding: 8px;
+    border: #d6d9dc solid 1px;
+	border-radius: 5px;
+    width: 50%;
+    margin-left: 50px;
+}
+
+.confirm{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #5995da;
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.back{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #5995da;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
