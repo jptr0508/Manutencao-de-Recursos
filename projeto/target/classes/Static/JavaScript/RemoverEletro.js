@@ -1,5 +1,4 @@
 var utilizador_id=1;
-var id;
 
 window.onload = async function() {
     try {
@@ -36,22 +35,19 @@ window.onload = async function() {
     }
 }
 
-async function RemElet(id) {
+async function RemElet() {
     try {
-        id = eletrodomestico.eletro_id;
+        let eletrodomestico = {
+            eletro_id : parseInt(document.getElementById("eletrodomestico").value)
+        }
         let result = await $.ajax({
-            url: "/api/eletrodomesticos/" + utilizador_id + "/" + id + "/",
+            url: "/api/eletrodomesticos/" + utilizador_id + "/" + eletrodomestico.eletro_id,
             method: "DELETE",
             
-            success: function () {
-                alert('record has been deleted');
-            },
-            error: function (error) {
-                alert(error);
+           
+        });
 
-        }});
-
-        alert(JSON.stringify(result));
+       
         // Change to eletrodomesticos page
         sessionStorage.setItem("eletro_id",result.id);
         window.location = "MostrarEletro.html";
