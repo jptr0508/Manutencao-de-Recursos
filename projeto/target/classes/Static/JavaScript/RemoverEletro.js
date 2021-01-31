@@ -43,8 +43,6 @@ async function RemElet() {
         let result = await $.ajax({
             url: "/api/eletrodomesticos/" + utilizador_id + "/" + eletrodomestico.eletro_id,
             method: "DELETE",
-            
-           
         });
 
        
