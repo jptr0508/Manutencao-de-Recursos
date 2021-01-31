@@ -20,14 +20,12 @@ Para este trabalho se concretizar vamos recorrer a diversos sites, tais como a I
 
 ## Casos de utilização:
 
-### Visualização do custo da energia consumida e da energia total consumida.
+### Visualização do custo da energia consumida.
 **Descrição:** \
-Na página principal será mostrado ao utilizador o custo mensal da energia consumida, bem como a participação energética de cada eletrodoméstico.
-Se o utilizador ainda nao possuir nenhum eletrodoméstico registado, ser-lhe-á pedido que registe pelo menos um eletrodoméstico.
+Na página principal será mostrado ao utilizador os diversos custos que o utilizador teve, bem como o eletrodoméstico correspondente.
 
 **Pré-condições:**
-- Utilizador entra com sucesso na sua pagina;
-- Existe uma comunicação feita com sucesso com a base de dados;
+- O utilizador tem eletrodomesticos e consumos registados.
 
 **Passo a passo:**
 1. Executar a aplicação.   
@@ -35,8 +33,7 @@ Se o utilizador ainda nao possuir nenhum eletrodoméstico registado, ser-lhe-á 
 3. Se não houverem eletrodomesticos registados, o utilizador terá de registar novos eletrodomésticos.
 4. O utilizador introduz os consumos dos respetivos eletrodomésticos, se ainda não houverem valores.
 5. Uma vez introduzidos os dados, estes serão registados na base de dados.
-6. Serão apresentados na homepage do utilizador o consumo total dos eletrodomesticos e o custo do consumo elétrico.
-7. O utilizador tambem poderá ordenar os eletrodomesticos por ordem crescente ou decrescente de consumo ou por ordem alfabetica quando estes são apresentados.
+6. Serão apresentados na homepage do utilizador os consumos dos eletrodomesticos.
 
 **Pós-condições:**
 - Comunicação correta com a base de dados.
@@ -49,7 +46,7 @@ Adicionar ou remover eletrodomésticos
 - Comunicação correta com a base de dados.
 
 **Passo a passo:**
-1. Na home page, será apresentado ao utilizador a opção de alterar os seus eletromoésticos através dum botão.
+1. Na pagina dos eletrodomesticos, será apresentado ao utilizador a opção de alterar os seus eletromoésticos através de dois botoes.
 2. Uma vez carregado, o utilizador será levado para uma página em que vai visualizar todos os eletrodomésticos que possui.
 3. No canto superior direito da página serão apresentados dois botões, em que um dá a opção do utilizador remover um eletrodoméstico e outro para adicionar um eletrodoméstico, neste caso o utilizador vai ter de colocar os dados respetivos ao eletrodoméstico para o adicionar com sucesso.
 4. Se o utilizador não quiser fazer nenhuma destas opções ser-lhe-á dada a opção de voltar atrás através dum botão localizado no canto inferior direito da página.
@@ -66,23 +63,23 @@ N/A
 
 **Passo a passo:**
 1. Na homepage do utilizador será apresentado um botão no canto superior direito em que se o utilizador o carregar será levado para uma nova página.
-2. Nesta página, o utilizador vai indicar que eletrodomésticos estiveram ligados e o respetivo tempo que estiveram ligados.
+2. Nesta página, o utilizador vai indicar o eletrodomésticos que esteve ligado e o respetivo tempo que esteve ligado.
 3. Com estes dados, o programa vai fazer os calculos para saber a quantidade de energia elétrica consumida naquela semana.
 
 
 **Pós-condições:**
 -Comunicação com a base de dados
 
-### Estabelecimento de um objetivo
+### Calculo do custo
 **Descrição:** O utilizador estabelece um objetivo para o seu custo elétrico.
 
 **Pré-condições:**
-N/A
+O utilizador escreve corretamente o nome do mes.
 
 **Passo a passo:**
-1. Na home page será apresentado ao utilizador um botão ao lado do seu custo elétrico, que perguntará ao utilizador se este quer estabelecer um objetivo e quanto tenciona pagar ao mês no seu consumo elétrico. 
-2. Uma vez carregado, o utilizador será levado para uma página onde vai poder introduzir o valor em euros de quanto tenciona gastar.
-3. O valor será guardado na base de dados e será mostrado ao utilizador qual a forma mais rápida de atingir esse valor, mostrando assim o eletrodoméstico mais usado, incentivando o utilizador a tentar utilizá-lo menos.
+1. Na pagina do custo será apresentado ao utilizador um botão do lado superior direito, que uma vez carregado levara o utilizador para uma pagina onde pode escolher o mes que vai introduzir o consumo.
+2. O utilizador escreve o nome do mes em ingles do qual pertende que o programa calcule o seu custo.
+3. O custo sera depois apresentado na pagina dos Custos.
 
 **Pós-condições:**
 - Comunicação com a base de dados.
