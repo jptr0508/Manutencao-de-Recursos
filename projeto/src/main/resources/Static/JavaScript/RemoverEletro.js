@@ -36,14 +36,18 @@ window.onload = async function() {
 }
 
 async function RemElet() {
-    try {        
-        
-        await $.ajax({
-            url: "/api/eletrodomesticos/"+ utilizador_id+ "/"+ eletrodomestico.eletro_id,
+    try {
+        let eletrodomestico = {
+            eletro_id : parseInt(document.getElementById("eletrodomestico").value)
+        }
+        let result = await $.ajax({
+            url: "/api/eletrodomesticos/" + utilizador_id + "/" + eletrodomestico.eletro_id,
             method: "DELETE",
         });
 
+       
         // Change to eletrodomesticos page
+        sessionStorage.setItem("eletro_id",result.id);
         window.location = "MostrarEletro.html";
     } catch(err) {
         console.log(err);
