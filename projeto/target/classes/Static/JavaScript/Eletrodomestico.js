@@ -7,7 +7,7 @@ window.onload = async function() {
     });
     let html = "";
     for(let elet of res) {
-        html+= "<p>"+"id:"+elet.eletro_id+" - Nome:"+elet.eletro_nome+" - " + elet.eletro_potencia + "W"+"</p>";
+        html+= "<p>"+"id: "+elet.eletro_id+" - Nome: "+elet.eletro_nome+" - " + elet.eletro_potencia + "W"+"</p>";
     }
     document.getElementById("eletrodomesticos").innerHTML = html;
 }//catch(err){console.log(err)}
